@@ -15,7 +15,7 @@ pipeline {
                             dir('cart-microservice-nodejs') {
                                 def scannerHome = tool 'sonarscanner4'
                                  withSonarQubeEnv('sonar-pro') {
-                                     sh """${scannerHome}/bin/sonar-scanner 
+                                     sh """${scannerHome}/bin/sonar-scanner \
                                      -Dsonar.projectKey=cart-nodejs \
                                      -D sonar.login=admin \
                                      -D sonar.password=admin123 """
